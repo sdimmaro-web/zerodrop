@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeroDrop — Скины и кейсы</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#0c1018;color:#fff;min-height:100vh;padding:32px 16px}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:28px;margin-bottom:6px}
+h1 span{color:#ffb400}
+.sub{color:#8d97ad;margin-bottom:22px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,#1b2435,#141c29);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:20px;margin-bottom:18px}
+label{display:block;color:#98a2b7;font-size:13px;margin-bottom:8px}
+input,select,textarea{width:100%;border:none;outline:none;border-radius:12px;background:#101824;color:#fff;padding:12px 14px;font-size:14px;font-family:inherit}
+input,select{height:46px;padding:0 14px}
+textarea{min-height:180px;resize:vertical;line-height:1.45}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 2px rgba(255,180,0,.35)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+button{height:46px;border:none;border-radius:12px;padding:0 18px;font-weight:700;cursor:pointer;transition:.2s}
+.btn-main{background:linear-gradient(90deg,#ff8a00,#ffd500);color:#111}
+.btn-secondary{background:#283447;color:#fff}
+.btn-danger{background:#5a2430;color:#ffb4b4}
+button:hover{transform:translateY(-1px)}
+button:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.preview{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;margin-top:14px}
+.preview img{width:110px;height:110px;object-fit:contain;background:#0f1622;border-radius:12px}
+.price{font-size:24px;font-weight:800;color:#ffb400;margin-top:6px}
+.meta{color:#9ba6ba;font-size:13px;margin-top:6px;line-height:1.45}
+.status{margin-top:12px;padding:12px 14px;border-radius:12px;font-size:14px;display:none;white-space:pre-wrap}
+.status.show{display:block}
+.status.ok{background:rgba(69,212,131,.12);color:#7dffb0;border:1px solid rgba(69,212,131,.25)}
+.status.err{background:rgba(255,80,80,.1);color:#ff9b9b;border:1px solid rgba(255,80,80,.25)}
+.status.info{background:rgba(102,192,244,.1);color:#c7e8fb;border:1px solid rgba(102,192,244,.25)}
+.case-list{display:flex;flex-direction:column;gap:10px;max-height:280px;overflow:auto}
+.case-btn{text-align:left;background:#101824;color:#fff;border:1px solid rgba(255,255,255,.06);width:100%}
+.case-btn.active{border-color:#ffb400;box-shadow:0 0 0 1px rgba(255,180,0,.35)}
+.case-btn small{display:block;color:#8d97ad;font-weight:500;margin-top:3px}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-top:12px}
+.item{background:#101824;border-radius:12px;padding:10px;border:1px solid rgba(255,255,255,.05);position:relative}
+.item img{width:100%;height:70px;object-fit:contain}
+.item .n{font-size:12px;font-weight:700;margin-top:6px;min-height:32px}
+.item .p{color:#ffb400;font-size:12px;font-weight:700}
+.item .rm{position:absolute;top:6px;right:6px;height:24px;padding:0 8px;font-size:11px;border-radius:8px}
+.hint{color:#7d879c;font-size:12px;margin-top:8px;line-height:1.4}
+a{color:#66c0f4}
+h2{font-size:17px;margin-bottom:12px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tab{background:#182232;color:#9ba6ba;border:1px solid rgba(255,255,255,.06)}
+.tab.active{background:#283447;color:#fff;border-color:#ffb400}
+.progress{height:8px;background:#101824;border-radius:99px;overflow:hidden;margin-top:12px;display:none}
+.progress.show{display:block}
+.progress > i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff8a00,#ffd500);transition:width .2s}
+.log{margin-top:10px;max-height:160px;overflow:auto;font-size:12px;color:#9ba6ba;line-height:1.5}
+.log .ok{color:#7dffb0}
+.log .err{color:#ff9b9b}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ZeroDrop — скины → кейсы</h1>
+  <p class="sub">Добавляй скины по одному или <b>массово списком</b>. Данные пишутся в <code>skins/cases.json</code>.</p>
+
+  <div class="grid">
+    <div>
+      <div class="card">
+        <div class="tabs">
+          <button type="button" class="tab active" id="tabSingle">Один скин</button>
+          <button type="button" class="tab" id="tabBulk">Массово</button>
+        </div>
+
+        <div id="panelSingle">
+          <label for="skinName">Market Hash Name</label>
+          <input id="skinName" placeholder="★ Navaja Knife | Marble Fade (Factory New)" autocomplete="off">
+          <div class="row">
+            <button class="btn-main" id="btnFetch" type="button">Загрузить с маркета</button>
+            <button class="btn-secondary" id="btnAddCase" type="button" disabled>Добавить в кейс</button>
+          </div>
+          <p class="hint">Для ножей указывай ★. Пример: <code>AK-47 | Redline (Field-Tested)</code></p>
+          <div id="previewCard" class="preview" hidden>
+            <img id="skinImage" alt="">
+            <div>
+              <div id="skinTitle" style="font-size:18px;font-weight:800"></div>
+              <div class="price" id="skinPrice">—</div>
+              <div class="meta" id="skinMeta"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="panelBulk" hidden>
+          <label for="bulkNames">Список скинов (каждый с новой строки)</label>
+          <textarea id="bulkNames" placeholder="AK-47 | Redline (Field-Tested)
+AWP | Asiimov (Field-Tested)
+★ Karambit | Doppler (Factory New)
+M4A1-S | Printstream (Minimal Wear)"></textarea>
+          <p class="hint">До 50 штук за раз. Цена и картинка подтянутся с маркета автоматически. Сначала выбери кейс справа.</p>
+          <div class="row">
+            <button class="btn-main" id="btnBulk" type="button">Залить список в кейс</button>
+            <button class="btn-secondary" id="btnClearBulk" type="button">Очистить</button>
+          </div>
+          <div class="progress" id="bulkProgress"><i id="bulkBar"></i></div>
+          <div class="log" id="bulkLog"></div>
+        </div>
+
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="card">
+        <h2>Создать новый кейс</h2>
+        <label>Название</label>
+        <input id="newCaseName" placeholder="Новый кейс">
+        <label style="margin-top:10px">Цена открытия (₽)</label>
+        <input id="newCasePrice" type="number" value="499" min="0">
+        <div class="row">
+          <button class="btn-secondary" id="btnCreateCase" type="button">Создать кейс</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h2>Выбери кейс</h2>
+        <div class="case-list" id="caseList">Загрузка...</div>
+      </div>
+      <div class="card">
+        <h2 id="caseTitle">Содержимое кейса</h2>
+        <div class="items" id="caseItems"><p class="hint">Выбери кейс слева/выше</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let lastInfo = null;
+let cases = [];
+let selectedCaseId = null;
+
+const statusEl = document.getElementById("status");
+const previewCard = document.getElementById("previewCard");
+const btnAddCase = document.getElementById("btnAddCase");
+
+function showStatus(text, type = "info") {
+  statusEl.textContent = text;
+  statusEl.className = "status show " + type;
+}
+
+function networkErrorHint(err) {
+  if (location.protocol === "file:") {
+    return "Открой через http://localhost:3000/admin/add_skin.html (не file://)";
+  }
+  if (err && (err.name === "TypeError" || /Failed to fetch|NetworkError/i.test(String(err.message || err)))) {
+    return "Нет связи с сервером. Запусти node server.js";
+  }
+  return (err && err.message) || "Ошибка";
+}
+
+// tabs
+document.getElementById("tabSingle").onclick = () => {
+  document.getElementById("tabSingle").classList.add("active");
+  document.getElementById("tabBulk").classList.remove("active");
+  document.getElementById("panelSingle").hidden = false;
+  document.getElementById("panelBulk").hidden = true;
+};
+document.getElementById("tabBulk").onclick = () => {
+  document.getElementById("tabBulk").classList.add("active");
+  document.getElementById("tabSingle").classList.remove("active");
+  document.getElementById("panelSingle").hidden = true;
+  document.getElementById("panelBulk").hidden = false;
+};
+
+async function fetchSkin() {
+  const name = document.getElementById("skinName").value.trim();
+  if (!name) return showStatus("Введите название скина", "err");
+  lastInfo = null;
+  btnAddCase.disabled = true;
+  previewCard.hidden = true;
+  document.getElementById("btnFetch").disabled = true;
+  showStatus("Загрузка с маркета...", "info");
+  try {
+    const res = await fetch("/api/skin-info?name=" + encodeURIComponent(name));
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Ошибка");
+    lastInfo = data;
+    document.getElementById("skinImage").src = data.image || "";
+    document.getElementById("skinTitle").textContent = data.name || data.market_hash_name;
+    document.getElementById("skinPrice").textContent = data.price
+      ? Number(data.price).toLocaleString("ru-RU") + " ₽"
+      : "—";
+    document.getElementById("skinMeta").innerHTML =
+      "Hash: <b>" + (data.market_hash_name || "") + "</b><br>" +
+      "Редкость: " + (data.rarity || "—");
+    previewCard.hidden = false;
+    btnAddCase.disabled = selectedCaseId == null;
+    showStatus(data.price ? "Скин загружен. Выбери кейс и добавь." : (data.warning || "Скин найден"), data.price ? "ok" : "err");
+  } catch (err) {
+    showStatus(networkErrorHint(err), "err");
+  } finally {
+    document.getElementById("btnFetch").disabled = false;
+  }
+}
+
+async function loadCases() {
+  const list = document.getElementById("caseList");
+  try {
+    const res = await fetch("/api/cases", { cache: "no-store" });
+    const data = await res.json();
+    cases = data.cases || [];
+    if (!cases.length) {
+      list.innerHTML = "<p class='hint'>Кейсов нет</p>";
+      return;
+    }
+    list.innerHTML = cases.map((c) => {
+      const active = Number(c.id) === Number(selectedCaseId) ? " active" : "";
+      const count = Array.isArray(c.items) ? c.items.length : 0;
+      return `<button type="button" class="case-btn${active}" data-id="${c.id}">
+        ${c.name}
+        <small>${Number(c.price||0).toLocaleString("ru-RU")} ₽ · ${count} скинов · id=${c.id}</small>
+      </button>`;
+    }).join("");
+    list.querySelectorAll(".case-btn").forEach((btn) => {
+      btn.onclick = () => {
+        selectedCaseId = Number(btn.dataset.id);
+        btnAddCase.disabled = !lastInfo;
+        loadCases();
+        renderCaseItems();
+      };
+    });
+    if (selectedCaseId != null) renderCaseItems();
+  } catch (err) {
+    list.innerHTML = "<p class='hint'>" + networkErrorHint(err) + "</p>";
+  }
+}
+
+function renderCaseItems() {
+  const box = document.getElementById("caseItems");
+  const title = document.getElementById("caseTitle");
+  const c = cases.find((x) => Number(x.id) === Number(selectedCaseId));
+  if (!c) {
+    title.textContent = "Содержимое кейса";
+    box.innerHTML = "<p class='hint'>Выбери кейс</p>";
+    return;
+  }
+  title.textContent = c.name + " — содержимое (" + (c.items||[]).length + ")";
+  const items = c.items || [];
+  if (!items.length) {
+    box.innerHTML = "<p class='hint'>Пока пусто.</p>";
+    return;
+  }
+  box.innerHTML = items.map((it) => `
+    <div class="item">
+      <button class="rm btn-danger" data-key="${(it.market_hash_name || it.name || "").replace(/"/g, "&quot;")}">×</button>
+      ${it.image ? `<img src="${it.image}" alt="" onerror="this.style.display='none'">` : ""}
+      <div class="n">${it.name || it.market_hash_name || ""}</div>
+      <div class="p">${it.price ? Number(it.price).toLocaleString("ru-RU") + " ₽" : "—"}</div>
+    </div>
+  `).join("");
+  box.querySelectorAll(".rm").forEach((btn) => {
+    btn.onclick = async () => {
+      try {
+        const res = await fetch("/api/cases", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "remove_skin", case_id: selectedCaseId, market_hash_name: btn.dataset.key, name: btn.dataset.key })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Ошибка");
+        showStatus("Скин удалён из кейса", "ok");
+        await loadCases();
+      } catch (err) {
+        showStatus(networkErrorHint(err), "err");
+      }
+    };
+  });
+}
+
+async function addToCase() {
+  if (!lastInfo) return showStatus("Сначала загрузи скин", "err");
+  if (selectedCaseId == null) return showStatus("Выбери кейс", "err");
+  btnAddCase.disabled = true;
+  showStatus("Добавляю в кейс...", "info");
+  try {
+    const res = await fetch("/api/cases", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "add_skin",
+        case_id: selectedCaseId,
+        auto: false,
+        skin: {
+          name: lastInfo.name,
+          market_hash_name: lastInfo.market_hash_name,
+          image: lastInfo.image || lastInfo.image_large || "",
+          price: lastInfo.price || 0,
+          rarity: lastInfo.rarity || "Unknown"
+        }
+      })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Ошибка");
+    showStatus("Добавлено. Скинов в кейсе: " + data.total_items, "ok");
+    await loadCases();
+  } catch (err) {
+    showStatus(networkErrorHint(err), "err");
+  } finally {
+    btnAddCase.disabled = !lastInfo || selectedCaseId == null;
+  }
+}
+
+async function bulkAdd() {
+  if (selectedCaseId == null) return showStatus("Сначала выбери кейс справа", "err");
+  const text = document.getElementById("bulkNames").value.trim();
+  if (!text) return showStatus("Вставь список скинов", "err");
+
+  const names = text.split(/\r?\n/).map((s) => s.trim()).filter(Boolean);
+  if (!names.length) return showStatus("Список пуст", "err");
+  if (names.length > 50) return showStatus("Максимум 50 скинов за раз", "err");
+
+  const btn = document.getElementById("btnBulk");
+  const log = document.getElementById("bulkLog");
+  const progress = document.getElementById("bulkProgress");
+  const bar = document.getElementById("bulkBar");
+  btn.disabled = true;
+  progress.classList.add("show");
+  bar.style.width = "8%";
+  log.innerHTML = "Загрузка " + names.length + " скинов с маркета... это может занять время";
+  showStatus("Массовая заливка: " + names.length + " шт.", "info");
+
+  try {
+    const res = await fetch("/api/cases", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "bulk_add_skins",
+        case_id: selectedCaseId,
+        names
+      })
+    });
+    bar.style.width = "100%";
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Ошибка");
+
+    const lines = (data.results || []).map((r) => {
+      if (r.ok) {
+        return `<div class="ok">✓ ${r.name || r.market_hash_name} — ${r.price ? Number(r.price).toLocaleString("ru-RU") + " ₽" : "без цены"}</div>`;
+      }
+      return `<div class="err">✗ ${r.name}: ${r.error || "ошибка"}</div>`;
+    });
+    log.innerHTML = lines.join("") || "Готово";
+    showStatus(`Готово: добавлено ${data.added}, ошибок ${data.failed}. В кейсе сейчас ${data.total_items} скинов.`, data.failed ? "info" : "ok");
+    await loadCases();
+  } catch (err) {
+    showStatus(networkErrorHint(err), "err");
+    log.innerHTML = '<div class="err">' + networkErrorHint(err) + "</div>";
+  } finally {
+    btn.disabled = false;
+    setTimeout(() => progress.classList.remove("show"), 800);
+  }
+}
+
+async function createCase() {
+  const name = document.getElementById("newCaseName").value.trim();
+  const price = Number(document.getElementById("newCasePrice").value) || 0;
+  if (!name) return showStatus("Введите название кейса", "err");
+  try {
+    const res = await fetch("/api/cases", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "create_case", name, price })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Ошибка");
+    selectedCaseId = data.case.id;
+    document.getElementById("newCaseName").value = "";
+    showStatus("Кейс создан: " + data.case.name, "ok");
+    await loadCases();
+  } catch (err) {
+    showStatus(networkErrorHint(err), "err");
+  }
+}
+
+document.getElementById("btnFetch").onclick = fetchSkin;
+document.getElementById("btnAddCase").onclick = addToCase;
+document.getElementById("btnCreateCase").onclick = createCase;
+document.getElementById("btnBulk").onclick = bulkAdd;
+document.getElementById("btnClearBulk").onclick = () => {
+  document.getElementById("bulkNames").value = "";
+  document.getElementById("bulkLog").innerHTML = "";
+};
+document.getElementById("skinName").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") fetchSkin();
+});
+
+if (location.protocol === "file:") {
+  showStatus("Открой через http://localhost:3000/admin/add_skin.html", "err");
+} else {
+  loadCases();
+}
+</script>
+</body>
+</html>

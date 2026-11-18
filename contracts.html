@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroDrop — Контракты</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.contracts-page{max-width:1200px;margin:24px auto 90px;padding:0 20px}
+.contracts-title{text-align:center;font-size:34px;font-weight:800;letter-spacing:.5px;margin:18px 0 28px}
+
+.contract-slots{
+  display:grid;grid-template-columns:repeat(10,1fr);gap:10px;
+  margin-bottom:22px;
+}
+.contract-slot{
+  aspect-ratio:1;background:linear-gradient(180deg,#161616,#101010);
+  border:1px dashed rgba(255,255,255,.12);border-radius:14px;
+  display:flex;align-items:center;justify-content:center;position:relative;
+  cursor:default;overflow:hidden;
+}
+.contract-slot.filled{
+  border-style:solid;border-color:rgba(255,180,0,.45);
+  background:linear-gradient(180deg,#1a1810,#12100a);
+}
+.contract-slot img{width:85%;height:85%;object-fit:contain;pointer-events:none}
+.contract-slot .slot-price{
+  position:absolute;bottom:4px;left:0;right:0;text-align:center;
+  font-size:10px;font-weight:700;color:#ffb400;background:rgba(0,0,0,.55);padding:2px 0;
+}
+.contract-slot .slot-x{
+  position:absolute;top:4px;right:4px;width:20px;height:20px;border:none;border-radius:6px;
+  background:#2a2a2a;color:#aaa;cursor:pointer;font-size:12px;line-height:1;display:none;
+}
+.contract-slot.filled .slot-x{display:block}
+.contract-slot .slot-x:hover{background:#444;color:#fff}
+
+.contract-info{
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#161616,#101010);border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;padding:18px 22px;margin-bottom:22px;
+}
+.contract-info .ci-item{text-align:center;min-width:140px}
+.contract-info .ci-label{color:#8d97ad;font-size:12px;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px}
+.contract-info .ci-value{color:#ffb400;font-size:20px;font-weight:800}
+.contract-info .ci-hint{color:#98a2b7;font-size:14px;max-width:320px;text-align:center;line-height:1.4}
+
+.btn-sign{
+  display:block;margin:0 auto 28px;width:min(320px,100%);height:54px;border:none;border-radius:14px;
+  background:linear-gradient(90deg,#ff8a00,#ffd500);color:#111;font-size:18px;font-weight:800;
+  cursor:pointer;transition:.25s;
+}
+.btn-sign:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,180,0,.3)}
+.btn-sign:disabled{opacity:.45;cursor:not-allowed}
+
+.contract-result{
+  display:none;text-align:center;margin:0 auto 28px;padding:28px;
+  background:linear-gradient(180deg,#161616,#101010);border:1px solid rgba(255,180,0,.25);
+  border-radius:20px;max-width:360px;animation:resultPop .45s ease;
+}
+.contract-result.show{display:block}
+.contract-result img{width:180px;height:140px;object-fit:contain;filter:drop-shadow(0 0 28px rgba(180,80,255,.55))}
+.contract-result .rn{margin-top:12px;font-weight:800;font-size:18px}
+.contract-result .rp{margin-top:6px;color:#ffb400;font-weight:800;font-size:22px}
+.contract-result .rt{margin-top:8px;color:#6dff9a;font-weight:700;font-size:14px}
+@keyframes resultPop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+
+.contract-bottom{
+  display:grid;grid-template-columns:1fr;gap:18px;
+}
+.section-box{
+  background:linear-gradient(180deg,#161616,#101010);border:1px solid rgba(255,255,255,.06);
+  border-radius:18px;padding:18px;
+}
+.section-box h2{font-size:16px;font-weight:700;margin-bottom:14px;color:#e8e8e8}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px}
+.section-head h2{margin:0}
+.section-head .cnt{color:#8d97ad;font-size:13px}
+
+.inv-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;
+}
+.skin-card{
+  background:#141414;border:1px solid rgba(255,255,255,.06);border-radius:14px;
+  padding:12px 10px;text-align:center;cursor:pointer;transition:.2s;
+}
+.skin-card:hover{transform:translateY(-3px);border-color:rgba(255,180,0,.35)}
+.skin-card.in-contract{opacity:.4;pointer-events:none}
+.skin-card img{width:100%;height:72px;object-fit:contain}
+.skin-card .n{margin-top:8px;font-size:12px;font-weight:600;min-height:30px;line-height:1.25}
+.skin-card .p{margin-top:4px;color:#ffb400;font-weight:800;font-size:13px}
+.empty-hint{color:#8d97ad;text-align:center;padding:30px 10px;grid-column:1/-1}
+
+.contract-msg{text-align:center;color:#8d97ad;font-size:14px;min-height:22px;margin-bottom:12px}
+
+@media(max-width:900px){
+  .contract-slots{grid-template-columns:repeat(5,1fr)}
+}
+@media(max-width:500px){
+  .contract-slots{grid-template-columns:repeat(5,1fr);gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header>
+  <a href="/" class="logo" aria-label="ZeroDrop"><img src="/images/logo_zerodrop.png" alt="ZeroDrop"></a>
+  <nav class="menu">
+    <a href="/">Кейсы</a>
+    <a href="/upgrade.html">Апгрейд</a>
+    <a href="/contracts.html" class="active">Контракты</a>
+    <a href="/profile.html">Профиль</a>
+  </nav>
+  <div class="user-panel">
+    <div class="balance">
+      <div class="balance-title">Баланс</div>
+      <div class="balance-money" id="balance">0 ₽</div>
+    </div>
+    <a class="profile auth-profile-link" href="/auth/steam">Войти через Steam</a>
+  </div>
+</header>
+
+<main class="contracts-page">
+  <h1 class="contracts-title">КОНТРАКТЫ</h1>
+
+  <div class="contract-slots" id="contractSlots"></div>
+
+  <div class="contract-info">
+    <div class="ci-item">
+      <div class="ci-label">Ваш баланс</div>
+      <div class="ci-value" id="ciBalance">0 ₽</div>
+    </div>
+    <div class="ci-item">
+      <div class="ci-label">Сумма контракта</div>
+      <div class="ci-value" id="ciSum">0 ₽</div>
+    </div>
+    <div class="ci-hint" id="ciHint">Положите минимум 3 предмета</div>
+  </div>
+
+  <div class="contract-msg" id="contractMsg"></div>
+  <button type="button" class="btn-sign" id="signBtn" disabled>ПОДПИСАТЬ</button>
+
+  <div class="contract-result" id="contractResult">
+    <img id="resultImg" alt="">
+    <div class="rn" id="resultName"></div>
+    <div class="rp" id="resultPrice"></div>
+    <div class="rt">Контракт выполнен</div>
+  </div>
+
+  <div class="contract-bottom">
+    <div class="section-box">
+      <div class="section-head">
+        <h2>Мои предметы</h2>
+        <span class="cnt" id="invCount">0 шт.</span>
+      </div>
+      <div class="inv-grid" id="myItems"></div>
+    </div>
+  </div>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/contracts.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" role="img" aria-label="Steam avatar placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1b2838"/>
+      <stop offset="1" stop-color="#171d25"/>
+    </linearGradient>
+  </defs>
+  <rect width="184" height="184" rx="92" fill="url(#bg)"/>
+  <circle cx="92" cy="69" r="31" fill="#66c0f4" opacity=".9"/>
+  <path d="M35 162c4-34 27-53 57-53s53 19 57 53" fill="#66c0f4" opacity=".9"/>
+  <circle cx="92" cy="92" r="86" fill="none" stroke="#2a475e" stroke-width="8"/>
+</svg>

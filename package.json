@@ -1,0 +1,14 @@
+{
+  "name": "doodrop-steam-auth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DOODROP static site with server-side Steam OpenID authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

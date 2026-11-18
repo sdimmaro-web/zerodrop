@@ -1,0 +1,727 @@
+[
+  {
+    "id": 0,
+    "name": "ФРЕДДИ КРЮГЕР",
+    "price": 8999,
+    "image": "/images/case_freddy.png",
+    "items": [
+      {
+        "name": "★ Navaja Knife | Marble Fade",
+        "market_hash_name": "★ Navaja Knife | Marble Fade (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Navaja%20Knife%20%7C%20Marble%20Fade%20(Factory%20New)",
+        "price": 10903.79,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ M9 Bayonet | Safari Mesh",
+        "market_hash_name": "★ M9 Bayonet | Safari Mesh (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20M9%20Bayonet%20%7C%20Safari%20Mesh%20(Battle-Scarred)",
+        "price": 34475.47,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bowie Knife | Case Hardened",
+        "market_hash_name": "★ Bowie Knife | Case Hardened (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bowie%20Knife%20%7C%20Case%20Hardened%20(Field-Tested)",
+        "price": 17796.32,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Survival Knife | Safari Mesh",
+        "market_hash_name": "★ Survival Knife | Safari Mesh (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Survival%20Knife%20%7C%20Safari%20Mesh%20(Battle-Scarred)",
+        "price": 4685.39,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bowie Knife | Urban Masked",
+        "market_hash_name": "★ Bowie Knife | Urban Masked (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bowie%20Knife%20%7C%20Urban%20Masked%20(Field-Tested)",
+        "price": 6437.51,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Fade",
+        "market_hash_name": "★ Bayonet | Fade (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Fade%20(Factory%20New)",
+        "price": 41407.2,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Shadow Daggers | Safari Mesh",
+        "market_hash_name": "★ Shadow Daggers | Safari Mesh (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Shadow%20Daggers%20%7C%20Safari%20Mesh%20(Battle-Scarred)",
+        "price": 4819.74,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Autotronic",
+        "market_hash_name": "★ Bayonet | Autotronic (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Autotronic%20(Factory%20New)",
+        "price": 69676.27,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Butterfly Knife | Urban Masked",
+        "market_hash_name": "★ Butterfly Knife | Urban Masked (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Butterfly%20Knife%20%7C%20Urban%20Masked%20(Field-Tested)",
+        "price": 53095.48,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Butterfly Knife | Forest DDPAT",
+        "market_hash_name": "★ Butterfly Knife | Forest DDPAT (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Butterfly%20Knife%20%7C%20Forest%20DDPAT%20(Field-Tested)",
+        "price": 48965.87,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Talon Knife | Blue Steel",
+        "market_hash_name": "★ Talon Knife | Blue Steel (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Talon%20Knife%20%7C%20Blue%20Steel%20(Minimal%20Wear)",
+        "price": 53331.39,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Huntsman Knife | Tiger Tooth",
+        "market_hash_name": "★ Huntsman Knife | Tiger Tooth (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Huntsman%20Knife%20%7C%20Tiger%20Tooth%20(Factory%20New)",
+        "price": 16940.65,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Shadow Daggers | Gamma Doppler",
+        "market_hash_name": "★ Shadow Daggers | Gamma Doppler (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Shadow%20Daggers%20%7C%20Gamma%20Doppler%20(Factory%20New)",
+        "price": 11577.92,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Slaughter",
+        "market_hash_name": "★ Bayonet | Slaughter (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Slaughter%20(Factory%20New)",
+        "price": 41189.68,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Shadow Daggers | Black Laminate",
+        "market_hash_name": "★ Shadow Daggers | Black Laminate (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Shadow%20Daggers%20%7C%20Black%20Laminate%20(Minimal%20Wear)",
+        "price": 4842.13,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Case Hardened",
+        "market_hash_name": "★ Bayonet | Case Hardened (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Case%20Hardened%20(Field-Tested)",
+        "price": 29626.95,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Shadow Daggers | Damascus Steel",
+        "market_hash_name": "★ Shadow Daggers | Damascus Steel (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Shadow%20Daggers%20%7C%20Damascus%20Steel%20(Field-Tested)",
+        "price": 5293.15,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Huntsman Knife | Case Hardened",
+        "market_hash_name": "★ Huntsman Knife | Case Hardened (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Huntsman%20Knife%20%7C%20Case%20Hardened%20(Field-Tested)",
+        "price": 18812.73,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ M9 Bayonet | Lore",
+        "market_hash_name": "★ M9 Bayonet | Lore (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20M9%20Bayonet%20%7C%20Lore%20(Factory%20New)",
+        "price": 119953.64,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Huntsman Knife | Slaughter",
+        "market_hash_name": "★ Huntsman Knife | Slaughter (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Huntsman%20Knife%20%7C%20Slaughter%20(Factory%20New)",
+        "price": 27831.64,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bowie Knife | Fade",
+        "market_hash_name": "★ Bowie Knife | Fade (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bowie%20Knife%20%7C%20Fade%20(Factory%20New)",
+        "price": 24515.32,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Tiger Tooth",
+        "market_hash_name": "★ Bayonet | Tiger Tooth (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Tiger%20Tooth%20(Factory%20New)",
+        "price": 35615.03,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ M9 Bayonet | Ultraviolet",
+        "market_hash_name": "★ M9 Bayonet | Ultraviolet (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20M9%20Bayonet%20%7C%20Ultraviolet%20(Minimal%20Wear)",
+        "price": 56417.39,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Karambit | Urban Masked",
+        "market_hash_name": "★ Karambit | Urban Masked (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Karambit%20%7C%20Urban%20Masked%20(Field-Tested)",
+        "price": 49728.78,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Bayonet | Lore",
+        "market_hash_name": "★ Bayonet | Lore (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Bayonet%20%7C%20Lore%20(Factory%20New)",
+        "price": 57176.3,
+        "rarity": "Covert"
+      },
+      {
+        "name": "★ Karambit | Damascus Steel",
+        "market_hash_name": "★ Karambit | Damascus Steel (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/%E2%98%85%20Karambit%20%7C%20Damascus%20Steel%20(Field-Tested)",
+        "price": 69474.75,
+        "rarity": "Covert"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "M4A4 ВСЕМ",
+    "price": 599,
+    "image": "/images/case_m4a4.png",
+    "items": [
+      {
+        "name": "M4A4 | Eye of Horus",
+        "market_hash_name": "M4A4 | Eye of Horus (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Eye%20of%20Horus%20(Factory%20New)",
+        "price": 114251.04,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Evil Daimyo",
+        "market_hash_name": "M4A4 | Evil Daimyo (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Evil%20Daimyo%20(Field-Tested)",
+        "price": 371.06,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Tornado",
+        "market_hash_name": "M4A4 | Tornado (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Tornado%20(Battle-Scarred)",
+        "price": 844.47,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Griffin",
+        "market_hash_name": "M4A4 | Griffin (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Griffin%20(Field-Tested)",
+        "price": 436.63,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "Souvenir M4A4 | Converter",
+        "market_hash_name": "Souvenir M4A4 | Converter (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/Souvenir%20M4A4%20%7C%20Converter%20(Minimal%20Wear)",
+        "price": 507,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Hellfire",
+        "market_hash_name": "StatTrak™ M4A4 | Hellfire (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Hellfire%20(Minimal%20Wear)",
+        "price": 16917.46,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Global Offensive",
+        "market_hash_name": "M4A4 | Global Offensive (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Global%20Offensive%20(Field-Tested)",
+        "price": 1725.73,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "Souvenir M4A4 | Eye of Horus",
+        "market_hash_name": "Souvenir M4A4 | Eye of Horus (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/Souvenir%20M4A4%20%7C%20Eye%20of%20Horus%20(Minimal%20Wear)",
+        "price": 65085.24,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | In Living Color",
+        "market_hash_name": "StatTrak™ M4A4 | In Living Color (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20In%20Living%20Color%20(Minimal%20Wear)",
+        "price": 6248.78,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Bullet Rain",
+        "market_hash_name": "StatTrak™ M4A4 | Bullet Rain (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Bullet%20Rain%20(Minimal%20Wear)",
+        "price": 13082.94,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Tooth Fairy",
+        "market_hash_name": "StatTrak™ M4A4 | Tooth Fairy (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Tooth%20Fairy%20(Minimal%20Wear)",
+        "price": 1283.5,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Jungle Tiger",
+        "market_hash_name": "M4A4 | Jungle Tiger (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Jungle%20Tiger%20(Field-Tested)",
+        "price": 1002.81,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Asiimov",
+        "market_hash_name": "StatTrak™ M4A4 | Asiimov (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Asiimov%20(Field-Tested)",
+        "price": 56670.1,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Turbine",
+        "market_hash_name": "StatTrak™ M4A4 | Turbine (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Turbine%20(Field-Tested)",
+        "price": 389.45,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Neo-Noir",
+        "market_hash_name": "M4A4 | Neo-Noir (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Neo-Noir%20(Minimal%20Wear)",
+        "price": 6136.03,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | Desolate Space",
+        "market_hash_name": "StatTrak™ M4A4 | Desolate Space (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20Desolate%20Space%20(Minimal%20Wear)",
+        "price": 5244.37,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | In Living Color",
+        "market_hash_name": "M4A4 | In Living Color (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20In%20Living%20Color%20(Minimal%20Wear)",
+        "price": 5140.41,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Zirka",
+        "market_hash_name": "M4A4 | Zirka (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Zirka%20(Field-Tested)",
+        "price": 2467.05,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A4 | X-Ray",
+        "market_hash_name": "StatTrak™ M4A4 | X-Ray (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A4%20%7C%20X-Ray%20(Field-Tested)",
+        "price": 8711.03,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Temukau",
+        "market_hash_name": "M4A4 | Temukau (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Temukau%20(Factory%20New)",
+        "price": 12699.89,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Poseidon",
+        "market_hash_name": "M4A4 | Poseidon (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Poseidon%20(Factory%20New)",
+        "price": 119954.43,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A4 | Tooth Fairy",
+        "market_hash_name": "M4A4 | Tooth Fairy (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A4%20%7C%20Tooth%20Fairy%20(Field-Tested)",
+        "price": 423.87,
+        "rarity": "Unknown"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "AK-47 ВСЕМ",
+    "price": 399,
+    "image": "/images/case_ak47.png",
+    "items": [
+      {
+        "name": "AK-47 | Jaguar",
+        "market_hash_name": "AK-47 | Jaguar (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Jaguar%20(Factory%20New)",
+        "price": 83068.69,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ AK-47 | Blue Laminate",
+        "market_hash_name": "StatTrak™ AK-47 | Blue Laminate (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Blue%20Laminate%20(Minimal%20Wear)",
+        "price": 3962.47,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Fuel Injector",
+        "market_hash_name": "AK-47 | Fuel Injector (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Fuel%20Injector%20(Minimal%20Wear)",
+        "price": 22962.32,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Cartel",
+        "market_hash_name": "AK-47 | Cartel (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Cartel%20(Field-Tested)",
+        "price": 1818.5,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Neon Rider",
+        "market_hash_name": "AK-47 | Neon Rider (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Neon%20Rider%20(Minimal%20Wear)",
+        "price": 8522.31,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Neon Revolution",
+        "market_hash_name": "AK-47 | Neon Revolution (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Neon%20Revolution%20(Minimal%20Wear)",
+        "price": 12675.1,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | First Class",
+        "market_hash_name": "AK-47 | First Class (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20First%20Class%20(Minimal%20Wear)",
+        "price": 14075.36,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Blue Laminate",
+        "market_hash_name": "AK-47 | Blue Laminate (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Blue%20Laminate%20(Field-Tested)",
+        "price": 1608.18,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Fire Serpent",
+        "market_hash_name": "AK-47 | Fire Serpent (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Fire%20Serpent%20(Field-Tested)",
+        "price": 96691.43,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ AK-47 | Elite Build",
+        "market_hash_name": "StatTrak™ AK-47 | Elite Build (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20(Field-Tested)",
+        "price": 588.57,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Bloodsport",
+        "market_hash_name": "AK-47 | Bloodsport (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Bloodsport%20(Factory%20New)",
+        "price": 18851.91,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Black Laminate",
+        "market_hash_name": "AK-47 | Black Laminate (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Black%20Laminate%20(Minimal%20Wear)",
+        "price": 7084.46,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Asiimov",
+        "market_hash_name": "AK-47 | Asiimov (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Asiimov%20(Field-Tested)",
+        "price": 4603.82,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Red Laminate",
+        "market_hash_name": "AK-47 | Red Laminate (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Red%20Laminate%20(Field-Tested)",
+        "price": 5690.6,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Point Disarray",
+        "market_hash_name": "AK-47 | Point Disarray (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Point%20Disarray%20(Minimal%20Wear)",
+        "price": 2364.69,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Jungle Spray",
+        "market_hash_name": "AK-47 | Jungle Spray (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Jungle%20Spray%20(Battle-Scarred)",
+        "price": 1243.52,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Green Laminate",
+        "market_hash_name": "AK-47 | Green Laminate (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Green%20Laminate%20(Field-Tested)",
+        "price": 2346.29,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Case Hardened",
+        "market_hash_name": "AK-47 | Case Hardened (Well-Worn)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Case%20Hardened%20(Well-Worn)",
+        "price": 23220.62,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Panthera onca",
+        "market_hash_name": "AK-47 | Panthera onca (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Panthera%20onca%20(Minimal%20Wear)",
+        "price": 26229.86,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Rat Rod",
+        "market_hash_name": "AK-47 | Rat Rod (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Rat%20Rod%20(Field-Tested)",
+        "price": 445.43,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Aquamarine Revenge",
+        "market_hash_name": "AK-47 | Aquamarine Revenge (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Aquamarine%20Revenge%20(Factory%20New)",
+        "price": 20132.22,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Redline",
+        "market_hash_name": "AK-47 | Redline (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Redline%20(Field-Tested)",
+        "price": 3483.45,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Elite Build",
+        "market_hash_name": "AK-47 | Elite Build (Well-Worn)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Elite%20Build%20(Well-Worn)",
+        "price": 175.87,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Slate",
+        "market_hash_name": "AK-47 | Slate (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Slate%20(Battle-Scarred)",
+        "price": 390.64,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Uncharted",
+        "market_hash_name": "AK-47 | Uncharted (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Uncharted%20(Battle-Scarred)",
+        "price": 68.89,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Steel Delta",
+        "market_hash_name": "AK-47 | Steel Delta (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Steel%20Delta%20(Field-Tested)",
+        "price": 195.32,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "AK-47 | Safety Net",
+        "market_hash_name": "AK-47 | Safety Net (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/AK-47%20%7C%20Safety%20Net%20(Field-Tested)",
+        "price": 311.21,
+        "rarity": "Unknown"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "M4A1-S ВСЕМ",
+    "price": 299,
+    "image": "/images/case_m4a1s.png",
+    "items": [
+      {
+        "name": "M4A1-S | Imminent Danger",
+        "market_hash_name": "M4A1-S | Imminent Danger (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Imminent%20Danger%20(Minimal%20Wear)",
+        "price": 87169.51,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Briefing",
+        "market_hash_name": "M4A1-S | Briefing (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Briefing%20(Minimal%20Wear)",
+        "price": 1280.31,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Dark Water",
+        "market_hash_name": "StatTrak™ M4A1-S | Dark Water (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Dark%20Water%20(Field-Tested)",
+        "price": 12361.62,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Basilisk",
+        "market_hash_name": "StatTrak™ M4A1-S | Basilisk (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Basilisk%20(Minimal%20Wear)",
+        "price": 3117.99,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Decimator",
+        "market_hash_name": "M4A1-S | Decimator (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Decimator%20(Factory%20New)",
+        "price": 7500.3,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Cyrex",
+        "market_hash_name": "M4A1-S | Cyrex (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Cyrex%20(Minimal%20Wear)",
+        "price": 19532.45,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Vaporwave",
+        "market_hash_name": "StatTrak™ M4A1-S | Vaporwave (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Vaporwave%20(Minimal%20Wear)",
+        "price": 26325.82,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Icarus Fell",
+        "market_hash_name": "M4A1-S | Icarus Fell (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Icarus%20Fell%20(Factory%20New)",
+        "price": 57909.62,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Flashback",
+        "market_hash_name": "M4A1-S | Flashback (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Flashback%20(Factory%20New)",
+        "price": 17413.27,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Blood Tiger",
+        "market_hash_name": "M4A1-S | Blood Tiger (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Blood%20Tiger%20(Factory%20New)",
+        "price": 2471.84,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Briefing",
+        "market_hash_name": "StatTrak™ M4A1-S | Briefing (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Briefing%20(Minimal%20Wear)",
+        "price": 2083.19,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Fade",
+        "market_hash_name": "M4A1-S | Fade (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Fade%20(Factory%20New)",
+        "price": 28029.97,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Hyper Beast",
+        "market_hash_name": "StatTrak™ M4A1-S | Hyper Beast (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Hyper%20Beast%20(Factory%20New)",
+        "price": 43754.29,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Night Terror",
+        "market_hash_name": "M4A1-S | Night Terror (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Night%20Terror%20(Minimal%20Wear)",
+        "price": 103.16,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Stratosphere",
+        "market_hash_name": "M4A1-S | Stratosphere (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Stratosphere%20(Factory%20New)",
+        "price": 5749.78,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Emphorosaur-S",
+        "market_hash_name": "M4A1-S | Emphorosaur-S (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Emphorosaur-S%20(Minimal%20Wear)",
+        "price": 104.76,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "StatTrak™ M4A1-S | Chantico's Fire",
+        "market_hash_name": "StatTrak™ M4A1-S | Chantico's Fire (Minimal Wear)",
+        "image": "https://api.steamapis.com/image/item/730/StatTrak%E2%84%A2%20M4A1-S%20%7C%20Chantico's%20Fire%20(Minimal%20Wear)",
+        "price": 16793.51,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | VariCamo",
+        "market_hash_name": "M4A1-S | VariCamo (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20VariCamo%20(Factory%20New)",
+        "price": 275.09,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Boreal Forest",
+        "market_hash_name": "M4A1-S | Boreal Forest (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Boreal%20Forest%20(Battle-Scarred)",
+        "price": 13.78,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Liquidation",
+        "market_hash_name": "M4A1-S | Liquidation (Field-Tested)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Liquidation%20(Field-Tested)",
+        "price": 260.97,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "M4A1-S | Glitched Paint",
+        "market_hash_name": "M4A1-S | Glitched Paint (Well-Worn)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Glitched%20Paint%20(Well-Worn)",
+        "price": 190.46,
+        "rarity": "Unknown"
+      },
+      {
+        "name": "Souvenir M4A1-S | Mud-Spec",
+        "market_hash_name": "Souvenir M4A1-S | Mud-Spec (Battle-Scarred)",
+        "image": "https://api.steamapis.com/image/item/730/Souvenir%20M4A1-S%20%7C%20Mud-Spec%20(Battle-Scarred)",
+        "price": 130.48,
+        "rarity": "Unknown"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "НОЖИ",
+    "price": 12999,
+    "image": "/images/case_freddy.png",
+    "items": []
+  }
+]

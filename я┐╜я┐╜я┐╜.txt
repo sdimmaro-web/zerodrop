@@ -1,0 +1,33 @@
+КЕЙСЫ + СКИНЫ — ОБНОВЛЕНИЕ
+==========================
+
+Что было не так:
+1) Картинки кейсов ссылались на несуществующие freddy.png / ak.png / knife.png
+2) server.js не отдавал case.html → страница кейса была 404
+3) Содержимое кейсов не было привязано к данным
+
+Что сделать:
+1. Останови Node.js полностью
+2. Скопируй файлы с заменой в корень сайта:
+   - server.js
+   - index.html
+   - case.html
+   - api/steam_market.js
+   - admin/add_skin.html
+   - js/case.js
+   - js/common.js
+   - skins/cases.json
+   - skins/skins.json
+   - css/style.css (если нужно)
+
+3. Запусти: node server.js
+
+4. Открой:
+   http://localhost:3000/
+   http://localhost:3000/case.html?id=2
+
+Кейсы настраиваются в skins/cases.json
+Скины с маркета — в skins/skins.json (через /admin/add_skin.html)
+
+Можно вручную прописать в cases.json item.image как URL с Steam
+(тот что даёт админка при добавлении скина).

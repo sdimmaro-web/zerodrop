@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroDrop — Кейс</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+.case-page{max-width:1200px;margin:30px auto 80px;padding:0 20px}
+.back{color:#8d97ad;text-decoration:none;font-weight:600}
+.back:hover{color:#fff}
+.case-hero{text-align:center;margin:30px 0 20px}
+.case-hero img{width:220px;height:220px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(255,180,0,.2))}
+.case-hero h1{font-size:36px;margin-top:10px}
+.case-hero .case-price{color:#ffb400;font-size:28px;font-weight:800;margin-top:8px}
+
+.qty-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 4px}
+.qty-btn{
+  min-width:52px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.1);
+  background:#151c2b;color:#c8d0e0;font-weight:800;font-size:14px;cursor:pointer;transition:.2s;
+}
+.qty-btn:hover{border-color:rgba(255,180,0,.4);color:#fff}
+.qty-btn.active{background:linear-gradient(90deg,#ff8a00,#ffd500);color:#111;border-color:transparent}
+
+.roulette-stack{display:flex;flex-direction:column;gap:10px;margin:24px 0 10px}
+.roulette-wrap{
+  position:relative;height:150px;border-radius:16px;background:#0d1320;
+  border:1px solid rgba(255,255,255,.06);overflow:hidden;
+}
+.roulette-wrap::after{
+  content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+  width:4px;height:100%;background:#ffb400;box-shadow:0 0 20px #ffb400;z-index:2;
+}
+.roll{display:flex;gap:12px;height:100%;align-items:center;padding-left:50%;will-change:transform}
+.roll-card{
+  flex:0 0 130px;height:130px;background:#151c2b;border-radius:14px;
+  border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:8px;
+}
+.roll-card img{width:80px;height:80px;object-fit:contain}
+.roll-card span{font-size:11px;color:#9ba6ba;text-align:center;margin-top:4px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.open-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0 8px;align-items:center}
+.open-row button{
+  min-width:200px;height:54px;border:none;border-radius:14px;font-weight:800;font-size:16px;cursor:pointer;
+}
+.btn-open{background:linear-gradient(90deg,#ff8a00,#ffd500);color:#111}
+.btn-open:disabled{opacity:.5;cursor:not-allowed}
+.total-price{color:#8d97ad;font-size:14px;font-weight:600}
+.total-price b{color:#ffb400;font-size:16px}
+
+.result-box{text-align:center;min-height:28px;font-size:18px;font-weight:700;margin:8px 0 12px;color:#ffb400}
+.multi-results{
+  display:none;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;
+  margin:0 0 12px;padding:14px;background:#0d1320;border-radius:16px;border:1px solid rgba(255,255,255,.06);
+}
+.multi-results.show{display:grid}
+.multi-card{
+  background:#151c2b;border-radius:14px;padding:12px;text-align:center;
+  border:1px solid rgba(255,255,255,.06);animation:popIn .35s ease;position:relative;
+}
+.multi-card.sold{opacity:.45;pointer-events:none}
+.multi-card.sold::after{
+  content:"ПРОДАНО";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:14px;color:#6dff9a;background:rgba(0,0,0,.55);border-radius:14px;
+}
+.multi-card img{width:100%;height:90px;object-fit:contain}
+.multi-card .n{margin-top:6px;font-size:12px;font-weight:700;min-height:30px;line-height:1.25}
+.multi-card .p{margin-top:4px;color:#ffb400;font-weight:800;font-size:13px}
+.multi-card .btn-sell-one{
+  margin-top:8px;width:100%;height:34px;border:none;border-radius:10px;cursor:pointer;
+  background:#1e2a1e;color:#6dff9a;font-weight:800;font-size:12px;border:1px solid rgba(109,255,154,.25);
+}
+.multi-card .btn-sell-one:hover{background:#243524}
+.multi-card .btn-sell-one:disabled{opacity:.4;cursor:not-allowed}
+.sell-bar{display:none;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 28px}
+.sell-bar.show{display:flex}
+.btn-sell-all{
+  min-width:200px;height:46px;border:none;border-radius:12px;cursor:pointer;
+  background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;font-weight:800;font-size:15px;
+}
+.btn-sell-all:hover{filter:brightness(1.08)}
+.btn-sell-all:disabled{opacity:.45;cursor:not-allowed}
+.btn-keep{
+  min-width:140px;height:46px;border-radius:12px;cursor:pointer;
+  background:#151c2b;color:#c8d0e0;font-weight:700;font-size:14px;border:1px solid rgba(255,255,255,.1);
+}
+@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+.contents h2{font-size:22px;margin-bottom:18px}
+.contents-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.content-item{
+  background:#151c2b;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px;text-align:center;
+}
+.content-item img{width:100%;height:110px;object-fit:contain}
+.content-item .n{margin-top:8px;font-size:13px;font-weight:700;min-height:34px}
+.content-item .p{margin-top:6px;color:#ffb400;font-weight:800}
+.common{border-bottom:3px solid #95a2b5}
+.uncommon{border-bottom:3px solid #44d46e}
+.rare{border-bottom:3px solid #45a2ff}
+.epic{border-bottom:3px solid #b44dff}
+.legendary{border-bottom:3px solid #ffb000}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header>
+  <a href="/" class="logo" aria-label="ZeroDrop"><img src="/images/logo_zerodrop.png" alt="ZeroDrop"></a>
+  <nav class="menu">
+    <a href="/" class="active">Кейсы</a>
+    <a href="/upgrade.html">Апгрейд</a>
+    <a href="/contracts.html">Контракты</a>
+    <a href="/profile.html">Профиль</a>
+  </nav>
+  <div class="user-panel">
+    <div class="balance">
+      <div class="balance-title">Баланс</div>
+      <div class="balance-money" id="balance">0 ₽</div>
+    </div>
+    <a class="profile auth-profile-link" href="/auth/steam">Войти через Steam</a>
+  </div>
+</header>
+
+<main class="case-page">
+  <a class="back" href="/">← Назад к кейсам</a>
+
+  <div class="case-hero">
+    <img id="caseImage" src="" alt="">
+    <h1 id="title">Кейс</h1>
+    <div class="case-price" id="price">—</div>
+  </div>
+
+  <div class="qty-row" id="qtyRow">
+    <button type="button" class="qty-btn active" data-qty="1">x1</button>
+    <button type="button" class="qty-btn" data-qty="2">x2</button>
+    <button type="button" class="qty-btn" data-qty="3">x3</button>
+    <button type="button" class="qty-btn" data-qty="5">x5</button>
+    <button type="button" class="qty-btn" data-qty="10">x10</button>
+  </div>
+
+  <div class="roulette-stack" id="rouletteStack">
+    <div class="roulette-wrap"><div class="roll" data-roll="0"></div></div>
+  </div>
+
+  <div class="open-row">
+    <button class="btn-open" id="open">ОТКРЫТЬ x1</button>
+  </div>
+  <div class="total-price" style="text-align:center">Итого: <b id="totalPrice">—</b></div>
+  <div class="result-box" id="result"></div>
+  <div class="multi-results" id="multiResults"></div>
+  <div class="sell-bar" id="sellBar">
+    <button type="button" class="btn-sell-all" id="sellAllBtn">Продать всё</button>
+    <button type="button" class="btn-keep" id="keepBtn">Оставить</button>
+  </div>
+
+  <section class="contents">
+    <h2>Содержимое кейса</h2>
+    <div class="contents-grid" id="items"></div>
+  </section>
+</main>
+
+<script src="/js/common.js"></script>
+<script src="/js/case.js?v=2"></script>
+</body>
+</html>

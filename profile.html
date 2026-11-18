@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroDrop | Профиль</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <a href="/" class="logo" aria-label="ZeroDrop"><img src="/images/logo_zerodrop.png" alt="ZeroDrop"></a>
+
+    <nav class="menu">
+        <a href="index.html">Кейсы</a>
+        <a href="upgrade.html">Апгрейд</a>
+        <a href="contracts.html">Контракты</a>
+            <a href="profile.html" class="active">Профиль</a>
+    </nav>
+
+    <div class="right-panel">
+        <div class="balance">
+            <div class="balance-title">Баланс</div>
+            <div class="balance-money" id="balance">0 ₽</div>
+        </div>
+
+        <button class="deposit">Пополнить</button>
+        <a class="profile auth-profile-link" href="/auth/steam">Войти через Steam</a>
+    </div>
+</header>
+
+<main class="profile-page">
+    <div id="steamNotice" class="steam-notice" hidden></div>
+
+    <div class="profile-header">
+        <div class="profile-card">
+            <div class="avatar">
+                <img id="steamAvatar" src="images/avatar-placeholder.svg" alt="Steam Avatar">
+            </div>
+
+            <h2 class="nickname" id="steamNickname">Steam не подключён</h2>
+            <div class="steam-status is-offline" id="steamStatus">● Offline</div>
+            <div class="steam-id" id="steamId">SteamID: —</div>
+
+            <a id="steamProfileLink" class="steam-profile-link" href="#" target="_blank" rel="noopener noreferrer" hidden>
+                Открыть профиль Steam
+            </a>
+
+            <div class="profile-balance">
+                <h3>Баланс</h3>
+                <h2 id="profileBalance">0 ₽</h2>
+            </div>
+
+            <div class="profile-buttons">
+                <button class="deposit-btn">Пополнить</button>
+                <button class="history-btn">История</button>
+            </div>
+        </div>
+
+        <div class="profile-right">
+            <div class="settings-grid">
+                <div class="setting-card">
+                    <div class="setting-title">Trade URL</div>
+                    <input type="text" class="info-input" id="tradeUrl" placeholder="Введите Trade URL">
+                </div>
+
+                <div class="setting-card">
+                    <div class="setting-title">Email</div>
+                    <input type="email" class="info-input" id="email" placeholder="Введите Email">
+                </div>
+
+                <div class="setting-card">
+                    <div class="setting-title">Промокод</div>
+                    <input type="text" class="info-input" id="promoCode" placeholder="Введите промокод">
+                    <button class="promo-btn" id="activatePromo">Активировать</button>
+                </div>
+
+                <div class="setting-card steam-account-card">
+                    <div class="setting-title">Аккаунт</div>
+                    <div class="account-info">
+                        <div id="steamConnectionText">Steam не подключён</div>
+                        <div class="online is-offline" id="steamConnectionStatus">● Offline</div>
+                    </div>
+
+                    <a class="steam-login-btn" id="steamLoginButton" href="/auth/steam">
+                        Войти через Steam
+                    </a>
+
+                    <a class="steam-logout-btn" id="steamLogoutButton" href="/auth/logout" hidden>
+                        Выйти из аккаунта
+                    </a>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="openedCases">0</div>
+                    <div class="stat-name">Открыто кейсов</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="itemsWon">0</div>
+                    <div class="stat-name">Выведено в Steam</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="moneySpent">0 ₽</div>
+                    <div class="stat-name">Потрачено</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="inventoryValue">0 ₽</div>
+                    <div class="stat-name">Стоимость инвентаря</div>
+                </div>
+            </div>
+
+            <div class="best-drop">
+                <div class="best-title">Лучший дроп</div>
+                <div class="best-card" id="bestDropCard">
+                    <div class="best-image">
+                        <img id="bestDropImage" src="images/avatar-placeholder.svg" alt="Лучший дроп">
+                    </div>
+                    <div class="best-info">
+                        <h2 id="bestDropName">Пока нет дропов</h2>
+                        <p id="bestDropRarity">Открой кейс, чтобы получить первый скин</p>
+                        <h3 id="bestDropPrice">0 ₽</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-section">
+                <div class="inventory-header">
+                    <h2>Инвентарь</h2>
+                    <div class="inventory-header-right">
+                        <span id="inventoryCount">0 предметов</span>
+                        <button type="button" class="btn-sell-all-inv" id="sellAllInvBtn" hidden>Продать всё</button>
+                    </div>
+                </div>
+
+                <div class="inventory-grid" id="inventoryGrid">
+                    <!-- заполняется из js/profile.js -->
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/steam.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

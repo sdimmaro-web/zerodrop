@@ -1,0 +1,81 @@
+{
+  "76561199829351270": {
+    "steamId": "76561199829351270",
+    "balance": 0,
+    "inventory": [
+      {
+        "id": "1795004651955_xzcany",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:24:11.955Z"
+      },
+      {
+        "id": "1795004635271_b59q2b",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:23:55.271Z"
+      },
+      {
+        "id": "1795004619541_nwaj6f",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:23:39.541Z"
+      },
+      {
+        "id": "1795004602567_9p7zlg",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:23:22.567Z"
+      },
+      {
+        "id": "1795004584135_a9gaco",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:23:04.135Z"
+      },
+      {
+        "id": "1795004566578_pc0h4x",
+        "name": "M4A1-S | Hot Rod",
+        "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+        "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+        "price": 142754.42,
+        "rarity": "Unknown",
+        "from_case": "Апгрейд",
+        "won_at": "2026-11-18T12:22:46.578Z"
+      }
+    ],
+    "bestDrop": {
+      "name": "M4A1-S | Hot Rod",
+      "market_hash_name": "M4A1-S | Hot Rod (Factory New)",
+      "image": "https://api.steamapis.com/image/item/730/M4A1-S%20%7C%20Hot%20Rod%20(Factory%20New)",
+      "price": 142754.42,
+      "rarity": "Unknown",
+      "from_case": "Апгрейд",
+      "won_at": "2026-11-18T12:22:46.578Z"
+    },
+    "openedCases": 69,
+    "moneySpent": 1143412,
+    "createdAt": "2026-11-17T10:42:12.195Z",
+    "updatedAt": "2026-11-18T12:24:41.338Z"
+  }
+}
